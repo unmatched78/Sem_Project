@@ -30,7 +30,7 @@ urlpatterns = [
     path('search/hypeit', views.search, name="search"),
     path("forgotpass",views.forgotpass, name="forgotpass"),
 
-   
+   #serving static and media
 ]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 
 

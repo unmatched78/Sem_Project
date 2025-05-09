@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     #local
     'crispy_forms',
     'phone_field',
-    'home.apps.HomeConfig',
+    'home.apps.HomeConfig',#our app
 
     #allauth
     'allauth',
@@ -67,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'Sem_project.urls'
@@ -95,7 +96,7 @@ WSGI_APPLICATION = 'Sem_project.wsgi.application'
 
 DATABASES = {
       'default': dj_database_url.config(
-          default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
+          default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.villa3'))
       )
   }
 SITE_ID = 2
@@ -154,3 +155,5 @@ EMAIL_USE_TLS = True
 django_heroku.settings(locals())
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# settings.py
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
